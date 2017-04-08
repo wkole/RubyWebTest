@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @user.user_id %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @user.password %>
+</p>
+
+<% if session[:user_id]==@user.user_id%>
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%end%>
+<%= link_to 'Back', users_path %>
